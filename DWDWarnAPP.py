@@ -1,3 +1,57 @@
+# -*- coding: utf-8 -*-
+"""
+Dieses Skript ruft aktuelle Wetterwarnungen des Deutschen Wetterdienstes (DWD) ab
+und zeigt Warnungen für einen vom Benutzer angegebenen Ort an.
+
+Funktionsweise:
+1.  Herunterladen der DWD-Wetterwarndaten:
+    - Lädt eine ZIP-Datei von der DWD OpenData-Seite herunter, die aktuelle
+      Wetterwarnungen im CAP (Common Alerting Protocol) XML-Format enthält.
+    - Entpackt die ZIP-Datei und liest die darin enthaltene XML-Datei.
+
+2.  Verarbeitung der XML-Warndaten:
+    - Parst die XML-Datei, um alle einzelnen Warnmeldungen zu extrahieren.
+    - Für jede Warnung werden Details wie Ereignistyp, Überschrift, Beschreibung,
+      Beginn, Ende, Schweregrad, Nachrichtentyp (z.B. "Alert", "Update"),
+      betroffene Region (areaDesc) und der zugehörige Amtliche Gemeindeschlüssel
+      (AGS), der aus der WARNCELLID abgeleitet wird, gespeichert.
+
+3.  Standortbestimmung des Benutzers:
+    - Fragt den Benutzer nach einem Ortsnamen.
+    - `get_coordinates(place)`: Verwendet den Nominatim-Dienst von OpenStreetMap,
+      um die geografischen Koordinaten (Breitengrad, Längengrad) des eingegebenen
+      Ortsnamens zu ermitteln.
+    - `get_ags_from_coordinates(lat, lon)`: Verwendet die ermittelten Koordinaten,
+      um über einen DWD Web Feature Service (WFS) den genauen Amtlichen
+      Gemeindeschlüssel (AGS) und den offiziellen Namen des Ortes zu bestimmen.
+      Dies geschieht durch Überprüfung, in welchem DWD-Warngemeinde-Polygon
+      die Koordinaten liegen.
+
+4.  Abgleich und Anzeige von Warnungen:
+    - Vergleicht den AGS des vom Benutzer angegebenen Ortes mit den AGS-Codes der
+      abgerufenen DWD-Warnungen.
+    - Eine Warnung gilt als relevant, wenn der AGS des Ortes mit dem AGS-Code der
+      Warnung beginnt (z.B. eine Warnung für einen Landkreis betrifft alle
+      Gemeinden in diesem Landkreis).
+    - Zeigt alle relevanten Warnungen für den angegebenen Ort mit detaillierten
+      Informationen an.
+
+Abhängigkeiten:
+- requests: Für HTTP-Anfragen (Download der DWD-Daten, Nominatim, DWD WFS).
+- shapely: Für geometrische Operationen (Prüfung, ob ein Punkt in einem Polygon liegt).
+- zipfile: Zum Entpacken der DWD-ZIP-Datei.
+- xml.etree.ElementTree: Zum Parsen der CAP-XML-Warndaten.
+- urllib.parse: Zum Kodieren von URL-Parametern.
+
+Hinweis:
+- Die User-Agent-Kennung in `get_coordinates` ist für die Nutzung von Nominatim
+  wichtig und sollte an die eigene Anwendung angepasst werden.
+- Das Skript geht davon aus, dass die relevante XML-Datei im DWD-ZIP die erste
+  XML-Datei ist oder spezifisch nach ".xml" endet.
+- Die WARNCELLID des DWD für COMMUNEUNION beginnt oft mit einer '1', gefolgt vom
+  AGS. Diese '1' wird entfernt, um den reinen AGS zu erhalten.
+"""
+
 import zipfile
 import xml.etree.ElementTree as ET
 import requests
@@ -21,7 +75,7 @@ def get_coordinates(place):
     # Ersetze Leerzeichen und Sonderzeichen im Ortsnamen für die URL
     encoded_place = urllib.parse.quote(place)
     url = f"https://nominatim.openstreetmap.org/search?format=json&q={encoded_place}"
-    headers = {'User-Agent': 'AGS-WarnApp/1.0 (https://example.com)'}
+    headers = {'User-Agent': 'AGS-WarnApp/1.0 (https://example.com)'} # Wichtig: Eigene User-Agent-Kennung verwenden!
     try:
         response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()  # Löst einen Fehler aus für HTTP-Fehlercodes 4xx/5xx
@@ -227,3 +281,4 @@ if lat is not None and lon is not None:
 else:
     print(
         f"⚠️ Der Ort '{place_name_input}' konnte nicht gefunden werden oder es gab ein Problem bei der Koordinatenabfrage.")
+
