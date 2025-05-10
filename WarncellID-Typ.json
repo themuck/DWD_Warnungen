@@ -1,0 +1,81 @@
+[
+  {
+    "WarncellID_Typ": 1,
+    "Beschreibung": "Landkreise",
+    "Shapefile": "LAND"
+  },
+  {
+    "WarncellID_Typ": 2,
+    "Beschreibung": "Seen",
+    "Shapefile": "LAKE"
+  },
+  {
+    "WarncellID_Typ": 2,
+    "Beschreibung": "Seenzusammenfassungen",
+    "Shapefile": "LAKE-SUM"
+  },
+  {
+    "WarncellID_Typ": 3,
+    "Beschreibung": "--",
+    "Shapefile": ""
+  },
+  {
+    "WarncellID_Typ": 4,
+    "Beschreibung": "Seegebiete",
+    "Shapefile": "SEA"
+  },
+  {
+    "WarncellID_Typ": 5,
+    "Beschreibung": "Küstengebiete",
+    "Shapefile": "COAST"
+  },
+  {
+    "WarncellID_Typ": 6,
+    "Beschreibung": "Kundenspezifische Objekte",
+    "Shapefile": "OBJECT"
+  },
+  {
+    "WarncellID_Typ": 7,
+    "Beschreibung": "Stadt-Unterteilungen",
+    "Shapefile": "QUARTER"
+  },
+  {
+    "WarncellID_Typ": 8,
+    "Beschreibung": "Gemeinden",
+    "Shapefile": "COMMUNE"
+  },
+  {
+    "WarncellID_Typ": 9,
+    "Beschreibung": "Zusammengefasste Typen",
+    "Eintraege": [
+      {
+        "Beschreibung": "Bundesländer",
+        "Shapefile": "STATE"
+      },
+      {
+        "Beschreibung": "Bundesl.-Zusammenfassungen",
+        "Shapefile": "AGGREGATION"
+      },
+      {
+        "Beschreibung": "Gemeinde-Zusammenfassungen",
+        "Shapefile": "DISTRICTAREA"
+      },
+      {
+        "Beschreibung": "Landkreis-Zusammenfassungen",
+        "Shapefile": "DISTRICTAREA"
+      },
+      {
+        "Beschreibung": "Landkreis-Unterteilungen",
+        "Shapefile": "REGION"
+      },
+      {
+        "Beschreibung": "Brandschutzbereiche",
+        "Shapefile": "FIRECONTROLDISTRICTS"
+      },
+      {
+        "Beschreibung": "WDR-Studios",
+        "Shapefile": "MEDIADISTRICT"
+      }
+    ]
+  }
+]
