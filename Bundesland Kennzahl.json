@@ -1,0 +1,18 @@
+[
+  { "Kennzahl": "01", "Name": "Schleswig-Holstein" },
+  { "Kennzahl": "02", "Name": "Freie und Hansestadt Hamburg" },
+  { "Kennzahl": "03", "Name": "Niedersachsen" },
+  { "Kennzahl": "04", "Name": "Freie Hansestadt Bremen" },
+  { "Kennzahl": "05", "Name": "Nordrhein-Westfalen" },
+  { "Kennzahl": "06", "Name": "Hessen" },
+  { "Kennzahl": "07", "Name": "Rheinland-Pfalz" },
+  { "Kennzahl": "08", "Name": "Baden-Württemberg" },
+  { "Kennzahl": "09", "Name": "Freistaat Bayern" },
+  { "Kennzahl": "10", "Name": "Saarland" },
+  { "Kennzahl": "11", "Name": "Berlin" },
+  { "Kennzahl": "12", "Name": "Brandenburg" },
+  { "Kennzahl": "13", "Name": "Mecklenburg-Vorpommern" },
+  { "Kennzahl": "14", "Name": "Freistaat Sachsen" },
+  { "Kennzahl": "15", "Name": "Sachsen-Anhalt" },
+  { "Kennzahl": "16", "Name": "Freistaat Thüringen" }
+]
