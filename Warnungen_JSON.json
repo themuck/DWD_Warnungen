@@ -1,0 +1,236 @@
+{
+  "warnungen": [
+    {
+      "code": "22",
+      "event": "FROST",
+      "level": 1,
+      "remark": ""
+    },
+    {
+      "code": "31",
+      "event": "GEWITTER",
+      "level": 1,
+      "remark": "Gewitter (auch mit Windböen)"
+    },
+    {
+      "code": "33",
+      "event": "STARKES GEWITTER",
+      "level": 2,
+      "remark": "Gewitter mit Sturmböen oder schweren Sturmböen"
+    },
+    {
+      "code": "40",
+      "event": "SCHWERES GEWITTER mit ORKANBÖEN",
+      "level": 3,
+      "remark": "Gewitter mit orkanartigen Böen oder Orkanböen"
+    },
+    {
+      "code": "41",
+      "event": "SCHWERES GEWITTER mit EXTREMEN ORKANBÖEN",
+      "level": 4,
+      "remark": "Gewitter mit extremen Orkanböen"
+    },
+    {
+      "code": "51",
+      "event": "WINDBÖEN",
+      "level": 1,
+      "remark": ""
+    },
+    {
+      "code": "52",
+      "event": "STURMBÖEN",
+      "level": 2,
+      "remark": ""
+    },
+    {
+      "code": "53",
+      "event": "SCHWERE STURMBÖEN",
+      "level": 2,
+      "remark": ""
+    },
+    {
+      "code": "59",
+      "event": "NEBEL",
+      "level": 1,
+      "remark": ""
+    },
+    {
+      "code": "61",
+      "event": "STARKREGEN",
+      "level": 2,
+      "remark": ""
+    },
+    {
+      "code": "62",
+      "event": "HEFTIGER STARKREGEN",
+      "level": 3,
+      "remark": ""
+    },
+    {
+      "code": "63",
+      "event": "DAUERREGEN",
+      "level": 2,
+      "remark": ""
+    },
+    {
+      "code": "64",
+      "event": "ERGIEBIGER DAUERREGEN",
+      "level": 3,
+      "remark": ""
+    },
+    {
+      "code": "65",
+      "event": "EXTREM ERGIEBIGER DAUERREGEN",
+      "level": 4,
+      "remark": ""
+    },
+    {
+      "code": "70",
+      "event": "LEICHTER SCHNEEFALL",
+      "level": 1,
+      "remark": ""
+    },
+    {
+      "code": "71",
+      "event": "SCHNEEFALL",
+      "level": 2,
+      "remark": ""
+    },
+    {
+      "code": "72",
+      "event": "STARKER SCHNEEFALL",
+      "level": 3,
+      "remark": ""
+    },
+    {
+      "code": "82",
+      "event": "STRENGER FROST",
+      "level": 2,
+      "remark": ""
+    },
+    {
+      "code": "84",
+      "event": "GLÄTTE",
+      "level": 1,
+      "remark": ""
+    },
+    {
+      "code": "85",
+      "event": "GLATTEIS",
+      "level": 3,
+      "remark": ""
+    },
+    {
+      "code": "86",
+      "event": "EXTREMES GLATTEIS",
+      "level": 4,
+      "remark": ""
+    },
+    {
+      "code": "87",
+      "event": "MARKANTE GLÄTTE",
+      "level": 2,
+      "remark": ""
+    },
+    {
+      "code": "88",
+      "event": "TAUWETTER",
+      "level": 2,
+      "remark": "Abflussmenge durch Niederschlag und Schneeschmelze wie bei Dauerregen"
+    },
+    {
+      "code": "89",
+      "event": "STARKES TAUWETTER",
+      "level": 3,
+      "remark": ""
+    }
+  ],
+  "vorabwarnungen": [
+    {
+      "code": "40",
+      "event": "VORABINFORMATION SCHWERES GEWITTER",
+      "level": 3,
+      "remark": "Vorabinformation für schweres Gewitter"
+    },
+    {
+      "code": "55",
+      "event": "VORABINFORMATION ORKANBÖEN",
+      "level": 3,
+      "remark": "Vorabinformation für Orkanböen"
+    },
+    {
+      "code": "65",
+      "event": "VORABINFORMATION HEFTIGER / ERGIEBIGER REGEN",
+      "level": 3,
+      "remark": "Vorabinformation für heftigen oder ergiebigen Regen"
+    },
+    {
+      "code": "75",
+      "event": "VORABINFORMATION STARKER SCHNEEFALL / SCHNEEVERWEHUNG",
+      "level": 3,
+      "remark": "Vorabinformation für starken Schneefall oder Schneeverwehung"
+    },
+    {
+      "code": "85",
+      "event": "VORABINFORMATION GLATTEIS",
+      "level": 3,
+      "remark": "Vorabinformation für Glatteis"
+    }
+  ],
+  "kuestenwarnungen": [
+    {
+      "code": "22",
+      "event": "STURMFLUT",
+      "level": 3,
+      "remark": "Warnung vor Sturmflut"
+    },
+    {
+      "code": "23",
+      "event": "HITZEWARNUNG",
+      "level": 1,
+      "remark": "Warnung vor starker Hitze an Küstenregionen"
+    }
+  ],
+  "hochseewarnungen": [
+    {
+      "code": "30",
+      "event": "STURMBÖEN auf hoher See",
+      "level": 2,
+      "remark": "Warnung vor Sturm- und Orkanböen auf der Hochsee"
+    },
+    {
+      "code": "32",
+      "event": "GEWITTER auf hoher See",
+      "level": 1,
+      "remark": "Warnung vor Gewittern auf der Hochsee"
+    }
+  ],
+  "binnenwarnungen": [
+    {
+      "code": "24",
+      "event": "STURMBÖEN Binnengewässer",
+      "level": 2,
+      "remark": "Warnung vor Sturmböen auf Binnengewässern"
+    },
+    {
+      "code": "25",
+      "event": "STARKREGEN Binnengewässer",
+      "level": 3,
+      "remark": "Warnung vor starkem Regen auf Binnengewässern"
+    }
+  ],
+  "testwarnungen": [
+    {
+      "code": "98",
+      "event": "TEST-WARNUNG",
+      "level": null,
+      "remark": ""
+    },
+    {
+      "code": "99",
+      "event": "TEST-UNWETTERWARNUNG",
+      "level": null,
+      "remark": ""
+    }
+  ]
+}
